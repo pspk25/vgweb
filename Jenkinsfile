@@ -2,11 +2,10 @@
 pipeline {
 agent any
 stages {
-stage('Build') {
-steps {
-withAnt{
- step{
-  build.xml
+  stage('Build') {
+	steps {
+	sh 'hostname -i'
+	}
   }
 }
  
