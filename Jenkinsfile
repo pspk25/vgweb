@@ -1,4 +1,4 @@
 node {
-  env.PATH
+  echo ${env.PATH}
   echo "Hello World"
 }
