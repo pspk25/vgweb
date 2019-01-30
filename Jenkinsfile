@@ -5,7 +5,9 @@ stages {
 stage('Build') {
 steps {
 withAnt{
+ step{
   build.xml
+  }
 }
  
 }
