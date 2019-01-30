@@ -4,19 +4,9 @@ agent any
 stages {
 stage('Build') {
 steps {
-echo 'Building..'
-}
-}
-stage('Test') {
-steps {
-echo 'Testing..'
-}
-}
-stage('Deploy') {
-steps {
-echo 'Deploying....'
+sh 'make' ①
+archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true ②
 }
 }
 }
 }
-
