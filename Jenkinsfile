@@ -9,7 +9,7 @@ pipeline {
         stage('Example stage 1') {
             steps {
                     sh 'printenv'
-		     echo env.BITBUCKET_COMMON_CREDS_USR
+		     echo env.BITBUCKET_COMMON_CREDS_USR2
 		    }
         }
         stage('Example stage 2') {
