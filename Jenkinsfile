@@ -8,6 +8,7 @@ pipeline {
         stage('Example stage 1') {
             steps {
                     sh 'printenv'
+		    sh '${AWS_ACCESS_KEY_ID}'
             }
         }
         stage('Example stage 2') {
