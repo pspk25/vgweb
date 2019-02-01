@@ -1,15 +1,15 @@
 pipeline {
     agent any   
     environment {
-        AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+
+    BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
+
     }
     stages {
         stage('Example stage 1') {
             steps {
                     sh 'printenv'
-		    echo env.AWS_ACCESS_KEY_ID
-		    echo env.HUDSON_HOME
+		    echo $BITBUCKET_COMMON_CREDS
 		    }
         }
         stage('Example stage 2') {
