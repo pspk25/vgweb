@@ -1,16 +1,15 @@
 pipeline {
     agent any
+
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
+
     stages {
         stage('Build') {
             steps {
-                sh 'id'
-		sh 'pwd'
-		sh 'hostname -i'
-		sh 'ls -lart'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
+                sh 'printenv'
             }
         }
     }
