@@ -9,6 +9,7 @@ pipeline {
             steps {
                     sh 'printenv'
 		    echo env.AWS_ACCESS_KEY_ID
+		    echo env.HUDSON_HOME
 		    }
         }
         stage('Example stage 2') {
